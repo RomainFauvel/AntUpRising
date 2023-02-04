@@ -137,6 +137,21 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7453037596958937800, guid: 20095d80a583bbe47acc16fe89d72256,
         type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7453037596958937800, guid: 20095d80a583bbe47acc16fe89d72256,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7453037596958937800, guid: 20095d80a583bbe47acc16fe89d72256,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7453037596958937800, guid: 20095d80a583bbe47acc16fe89d72256,
+        type: 3}
       propertyPath: m_LocalPosition.x
       value: -7.4
       objectReference: {fileID: 0}
@@ -185,6 +200,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7453037596958937801, guid: 20095d80a583bbe47acc16fe89d72256,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 7fea227ec04b66d4b91353b87987ac98,
+        type: 3}
     - target: {fileID: 7453037596958937802, guid: 20095d80a583bbe47acc16fe89d72256,
         type: 3}
       propertyPath: moveSpeed
@@ -203,17 +224,7 @@ PrefabInstance:
     - target: {fileID: 7453037596958937803, guid: 20095d80a583bbe47acc16fe89d72256,
         type: 3}
       propertyPath: m_GravityScale
-      value: 40
-      objectReference: {fileID: 0}
-    - target: {fileID: 7453037596958937806, guid: 20095d80a583bbe47acc16fe89d72256,
-        type: 3}
-      propertyPath: m_Size.x
-      value: 0.99530125
-      objectReference: {fileID: 0}
-    - target: {fileID: 7453037596958937806, guid: 20095d80a583bbe47acc16fe89d72256,
-        type: 3}
-      propertyPath: m_Offset.x
-      value: -0.0029959679
+      value: 80
       objectReference: {fileID: 0}
     - target: {fileID: 7453037596958937807, guid: 20095d80a583bbe47acc16fe89d72256,
         type: 3}
@@ -748,12 +759,34 @@ PolygonCollider2D:
       - {x: -12.979281, y: -7.0464287}
       - {x: -13.040825, y: -6.064408}
       - {x: -14.920866, y: -5.9950843}
+--- !u!1 &1595791552 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7453037596958937807, guid: 20095d80a583bbe47acc16fe89d72256,
+    type: 3}
+  m_PrefabInstance: {fileID: 591438699}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1595791557 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7453037596958937800, guid: 20095d80a583bbe47acc16fe89d72256,
     type: 3}
   m_PrefabInstance: {fileID: 591438699}
   m_PrefabAsset: {fileID: 0}
+--- !u!70 &1595791558
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1595791552}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.060879428, y: -0.008699602}
+  m_Size: {x: 1.4217178, y: 0.84774107}
+  m_Direction: 1
 --- !u!1 &1790413666
 GameObject:
   m_ObjectHideFlags: 0
