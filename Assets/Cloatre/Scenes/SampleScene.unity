@@ -123,6 +123,12 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!95 &97400130 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 5067472255197041275, guid: 39a8acaa3e7285b428dec363e7ba8118,
+    type: 3}
+  m_PrefabInstance: {fileID: 5067472255695187249}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &177497254
 GameObject:
   m_ObjectHideFlags: 0
@@ -1699,32 +1705,58 @@ PrefabInstance:
     - target: {fileID: 2307940773697769242, guid: 08e88dcedaa53394ab4ed2b6128559b2,
         type: 3}
       propertyPath: m_Size.x
-      value: 1.4714901
+      value: 0.34316605
       objectReference: {fileID: 0}
     - target: {fileID: 2307940773697769242, guid: 08e88dcedaa53394ab4ed2b6128559b2,
         type: 3}
       propertyPath: m_Size.y
-      value: 0.7450459
+      value: 0.196493
       objectReference: {fileID: 0}
     - target: {fileID: 2307940773697769242, guid: 08e88dcedaa53394ab4ed2b6128559b2,
         type: 3}
       propertyPath: m_Offset.x
-      value: -0.031160474
+      value: -0.011091523
       objectReference: {fileID: 0}
     - target: {fileID: 2307940773697769242, guid: 08e88dcedaa53394ab4ed2b6128559b2,
         type: 3}
       propertyPath: m_Offset.y
-      value: -0.041863322
+      value: 0.02280341
+      objectReference: {fileID: 0}
+    - target: {fileID: 2307940773697769242, guid: 08e88dcedaa53394ab4ed2b6128559b2,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 0.32
+      objectReference: {fileID: 0}
+    - target: {fileID: 2307940773697769242, guid: 08e88dcedaa53394ab4ed2b6128559b2,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 0.21
       objectReference: {fileID: 0}
     - target: {fileID: 2845687823417314400, guid: 08e88dcedaa53394ab4ed2b6128559b2,
         type: 3}
       propertyPath: m_Name
       value: fourmie_enemie
       objectReference: {fileID: 0}
+    - target: {fileID: 2845687823417314406, guid: 08e88dcedaa53394ab4ed2b6128559b2,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -1209840974, guid: db6cf19ff90884d4a8fdbeb20f34988c,
+        type: 3}
     - target: {fileID: 2845687823417314407, guid: 08e88dcedaa53394ab4ed2b6128559b2,
         type: 3}
       propertyPath: m_RootOrder
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2845687823417314407, guid: 08e88dcedaa53394ab4ed2b6128559b2,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2845687823417314407, guid: 08e88dcedaa53394ab4ed2b6128559b2,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 2845687823417314407, guid: 08e88dcedaa53394ab4ed2b6128559b2,
         type: 3}
@@ -1844,6 +1876,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: fourmieTest_Health
+      objectReference: {fileID: 0}
+    - target: {fileID: 5067472255197041268, guid: 39a8acaa3e7285b428dec363e7ba8118,
+        type: 3}
+      propertyPath: enemy
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5067472255197041268, guid: 39a8acaa3e7285b428dec363e7ba8118,
+        type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 97400130}
+    - target: {fileID: 5067472255197041268, guid: 39a8acaa3e7285b428dec363e7ba8118,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5067472255197041272, guid: 39a8acaa3e7285b428dec363e7ba8118,
         type: 3}

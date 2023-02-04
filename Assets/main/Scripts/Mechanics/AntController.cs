@@ -4,6 +4,8 @@ public class AntController : MonoBehaviour
 {
     //values of speed choose in the software
     public float speed;
+    public float speed2;
+    [SerializeField] public Animator animator;
 
     //componante that manage physics
     private Rigidbody2D rb;
@@ -28,6 +30,8 @@ public class AntController : MonoBehaviour
     {
         //edit the velocity by use input and speed
         rb.velocity = moveInput * speed;
+        float characterVelocity = Mathf.Abs(rb.velocity.x);
+        animator.SetFloat("Speed", characterVelocity);
         
     }
 }
