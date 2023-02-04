@@ -42,8 +42,6 @@ public class PlayerController : MonoBehaviour
         Debug.DrawRay(transform.position, -transform.up * 2, Color.red);
         rigidbody2d.velocity = moveInput;
 
-        print(Input.GetAxisRaw("Horizontal"));
-
         if(Input.GetAxisRaw("Horizontal") == 1){
             transform.localScale = new Vector3(-xScale, transform.localScale.y, transform.localScale.z);
         }else if(Input.GetAxisRaw("Horizontal") == -1){
