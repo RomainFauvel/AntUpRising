@@ -5,6 +5,7 @@ public class PlayerHeath : MonoBehaviour
 
     public int maxHealth = 100;
     public int currentHealth;
+    public bool val = false;
 
     public HealthBar healthBar;
     // Start is called before the first frame update
@@ -28,5 +29,15 @@ public class PlayerHeath : MonoBehaviour
         currentHealth -= damage;
         healthBar.SetHealth(currentHealth);
 
+    }
+
+    public bool IsDead()
+    {
+        
+        if(currentHealth <= 0)
+        {
+            val = true ;
+        }
+        return val;
     }
 }

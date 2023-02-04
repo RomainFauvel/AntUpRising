@@ -59,7 +59,7 @@ public class EnnemyBehaviour : MonoBehaviour
         else
         {
             moveInput = (player.transform.position - gameObject.transform.position).normalized * aggroSpeed;
-            print("Triggered");
+            print("Triggereddzzzz");
         }
         
         //get all the input of the user

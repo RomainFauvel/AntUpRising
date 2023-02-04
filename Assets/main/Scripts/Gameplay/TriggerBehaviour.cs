@@ -5,7 +5,7 @@ using UnityEngine;
 public class TriggerBehaviour : MonoBehaviour
 {
 
-    private EnnemyBehaviour behaviour;
+    private EnemiesControler behaviour;
     public CircleCollider2D col2D;
     public float aggroRadius=3;
     public float unAggroRadius=4;
@@ -14,7 +14,7 @@ public class TriggerBehaviour : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        behaviour = gameObject.GetComponentInParent<EnnemyBehaviour>();
+        behaviour = gameObject.GetComponentInParent<EnemiesControler>();
     }
 
     // Update is called once per frame
