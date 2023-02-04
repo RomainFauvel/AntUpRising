@@ -2,35 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FourmieBehaviourScript : MonoBehaviour
+public class FourmieEnemieBehaviourScript : MonoBehaviour
 {
-    /* // The force which is added when the player jumps
-     // This can be changed in the Inspector window
-     public float speed = 10f;
-     public Vector2 go_left = new Vector2(-4, 0);
-     public Vector2 go_right = new Vector2(4, 0);
-     public int i = 0;
-     void Start()
-     {
-         GetComponent<Rigidbody2D>().velocity = speed * go_left;
-     }
-
-     // Update is called once per frame
-     void Update()
-     {
-         if(i % 2 == 0)
-         {
-             movedRandomDirection = go_left;
-         }
-         else
-         {
-             movedRandomDirection = go_Right;
-
-         }
-
-
-     }
-
+   /*
      // Die by collision
      void OnCollisionEnter2D(Collision2D other)
      {
@@ -44,6 +18,8 @@ public class FourmieBehaviourScript : MonoBehaviour
 
     //values of speed choose in the software
     public float speed;
+
+    public int DamageOnCollision = 20;
 
     //componante that manage physics
     private Rigidbody2D rb;
@@ -88,8 +64,6 @@ public class FourmieBehaviourScript : MonoBehaviour
             duree = duree - Time.deltaTime;
             
         }
-        //get all the input of the user
-        //moveInput = new Vector2(Random.Range(1, 5), 0);
         
         
     }
@@ -99,6 +73,15 @@ public class FourmieBehaviourScript : MonoBehaviour
         //edit the velocity by use input and speed
         rb.velocity = moveInput * speed;
 
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(collision.transform.CompareTag("Player"))
+        {
+            PlayerHealth playerHealth = collision.transform.GetComponent<PlayerHealth>();
+            playerHealth.TakeDamage(DamageOnCollision);
+        }
     }
 }
 

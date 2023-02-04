@@ -11,6 +11,8 @@ public class AntController : MonoBehaviour
     //store the input's values
     private Vector2 moveInput;
 
+    [SerializeField] private Transform enemy;
+
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
