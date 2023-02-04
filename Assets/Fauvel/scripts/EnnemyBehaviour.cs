@@ -5,10 +5,13 @@ using UnityEngine;
 public class EnnemyBehaviour : MonoBehaviour
 {
     public float speed=2;
+    public float aggroSpeed = 2;
     public bool isTrigger = false;
 
     //componante that manage physics
     private Rigidbody2D rb;
+    //getting the player GameObject
+   private  GameObject player;
 
     //store the input's values
     private Vector2 moveInput;
@@ -18,6 +21,7 @@ public class EnnemyBehaviour : MonoBehaviour
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        player = GameObject.FindGameObjectWithTag("Player");
     }
 
     private void Update()
@@ -54,7 +58,8 @@ public class EnnemyBehaviour : MonoBehaviour
         }
         else
         {
-
+            moveInput = (player.transform.position - gameObject.transform.position).normalized * aggroSpeed;
+            print("Triggered");
         }
         
         //get all the input of the user
