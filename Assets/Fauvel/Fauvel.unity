@@ -550,6 +550,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40c7bc725da87cc4992d6a5beb73a598, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  col2D: {fileID: 1037439794}
+  aggroRadius: 3
+  unAggroRadius: 4
 --- !u!58 &1037439794
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -579,7 +582,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 2
-  aggroSpeed: 2
+  aggroSpeed: 0.5
   isTrigger: 0
 --- !u!1 &1477622864 stripped
 GameObject:
