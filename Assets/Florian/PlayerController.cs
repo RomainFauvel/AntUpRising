@@ -5,12 +5,14 @@ public class PlayerController : MonoBehaviour
 {
     public float moveSpeed = 5f;
 
-    public float xScale;
+    private float xScale;
 
     private RaycastHit2D hit;
 
     private Rigidbody2D rigidbody2d;
     private Vector2 moveInput;
+
+    [SerializeField] public Animator animator;
 
     private void Start()
     {
@@ -47,5 +49,13 @@ public class PlayerController : MonoBehaviour
         }else if(Input.GetAxisRaw("Horizontal") == -1){
             transform.localScale = new Vector3(xScale, transform.localScale.y, transform.localScale.z);
         }
+    }
+
+    private void FixedUpdate()
+    {
+        //edit the velocity by use input and speed
+        float characterVelocity = Mathf.Abs(rigidbody2d.velocity.x);
+        animator.SetFloat("Speed", characterVelocity);
+        
     }
 }

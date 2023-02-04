@@ -138,27 +138,27 @@ PrefabInstance:
     - target: {fileID: 7453037596958937800, guid: 20095d80a583bbe47acc16fe89d72256,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 2.3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7453037596958937800, guid: 20095d80a583bbe47acc16fe89d72256,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 2.3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7453037596958937800, guid: 20095d80a583bbe47acc16fe89d72256,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 2.3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7453037596958937800, guid: 20095d80a583bbe47acc16fe89d72256,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -7.4
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7453037596958937800, guid: 20095d80a583bbe47acc16fe89d72256,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -27.6
+      value: -26.45
       objectReference: {fileID: 0}
     - target: {fileID: 7453037596958937800, guid: 20095d80a583bbe47acc16fe89d72256,
         type: 3}
@@ -204,8 +204,13 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 7fea227ec04b66d4b91353b87987ac98,
+      objectReference: {fileID: 21300000, guid: 92712ed4eba304647988c5f2a099bc9d,
         type: 3}
+    - target: {fileID: 7453037596958937802, guid: 20095d80a583bbe47acc16fe89d72256,
+        type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 1595791559}
     - target: {fileID: 7453037596958937802, guid: 20095d80a583bbe47acc16fe89d72256,
         type: 3}
       propertyPath: moveSpeed
@@ -784,9 +789,29 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.060879428, y: -0.008699602}
-  m_Size: {x: 1.4217178, y: 0.84774107}
+  m_Offset: {x: -0.011250802, y: -0.55797535}
+  m_Size: {x: 2.1381905, y: 1.0184122}
   m_Direction: 1
+--- !u!95 &1595791559
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1595791552}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e6f8c320b80f5954db5ec69fbf01dfb6, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1790413666
 GameObject:
   m_ObjectHideFlags: 0
