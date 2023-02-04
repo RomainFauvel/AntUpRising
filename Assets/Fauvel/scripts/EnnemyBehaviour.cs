@@ -10,6 +10,9 @@ public class EnnemyBehaviour : MonoBehaviour
     //componante that manage physics
     private Rigidbody2D rb;
 
+    //Player GameObject
+    private GameObject player;
+
     //store the input's values
     private Vector2 moveInput;
     float duree;
@@ -18,6 +21,7 @@ public class EnnemyBehaviour : MonoBehaviour
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        player = GameObject.FindGameObjectsWithTag("Player")[0];
     }
 
     private void Update()
@@ -54,7 +58,7 @@ public class EnnemyBehaviour : MonoBehaviour
         }
         else
         {
-
+            moveInput = (player.transform.position-gameObject.transform.position).normalized*2;
         }
         
         //get all the input of the user

@@ -532,6 +532,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 2
+  isTrigger: 0
 --- !u!1 &1477622864 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5680842104324498049, guid: b9897b0767ea9a04eaece4be80051ef3,
@@ -588,12 +589,12 @@ PrefabInstance:
     - target: {fileID: 8197502059976918420, guid: 0a568651e03fa0b41a7066a1121a9d82,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.29
+      value: 10.24
       objectReference: {fileID: 0}
     - target: {fileID: 8197502059976918420, guid: 0a568651e03fa0b41a7066a1121a9d82,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.54
+      value: 1.23
       objectReference: {fileID: 0}
     - target: {fileID: 8197502059976918420, guid: 0a568651e03fa0b41a7066a1121a9d82,
         type: 3}
