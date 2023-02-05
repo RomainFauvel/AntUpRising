@@ -6,7 +6,7 @@ public class PlayerHealth : MonoBehaviour
 
     public int maxHealth = 100;
     public int currentHealth;
-    public bool isInvicible=false;
+    public bool isInvicible = false;
     public SpriteRenderer graphics;
     public float invicibilityFlashDelay = 0.15f;
     public float invicibilityTimeAfterHit = 2f;
@@ -22,20 +22,20 @@ public class PlayerHealth : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.H)) 
+        if (Input.GetKeyDown(KeyCode.H))
         {
-            TakeDamage(2);        
+            TakeDamage(2);
         }
     }
 
-    public void TakeDamage(int damage )
-    { 
+    public void TakeDamage(int damage)
+    {
 
         if (!isInvicible)
         {
             currentHealth -= damage;
             healthBar.SetHealth(currentHealth);
-            isInvicible= true;
+            isInvicible = true;
             StartCoroutine(InvincibilityFlash());
             StartCoroutine(HandleInvicibilityDelay());
         }
@@ -44,7 +44,7 @@ public class PlayerHealth : MonoBehaviour
     public IEnumerator InvincibilityFlash()
     {
 
-        while(isInvicible)
+        while (isInvicible)
         {
             graphics.color = new Color(1f, 1f, 1f, 0f);
             yield return new WaitForSeconds(invicibilityFlashDelay);
@@ -53,10 +53,10 @@ public class PlayerHealth : MonoBehaviour
         }
     }
 
-    public IEnumerator HandleInvicibilityDelay() 
+    public IEnumerator HandleInvicibilityDelay()
     {
         yield return new WaitForSeconds(invicibilityTimeAfterHit);
-        isInvicible= false;
+        isInvicible = false;
 
     }
 }
