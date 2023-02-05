@@ -487,27 +487,27 @@ PrefabInstance:
     - target: {fileID: 8544624993699910014, guid: 7e210cd8af642454b8b78c728b18a6b5,
         type: 3}
       propertyPath: MaxDistance
-      value: 1
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 8544624993699910014, guid: 7e210cd8af642454b8b78c728b18a6b5,
         type: 3}
       propertyPath: MinDistance
-      value: 0.1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8544624993699910014, guid: 7e210cd8af642454b8b78c728b18a6b5,
         type: 3}
       propertyPath: spreadCustomCurve.m_Curve.Array.data[0].value
-      value: 0.19722222
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8544624993699910014, guid: 7e210cd8af642454b8b78c728b18a6b5,
         type: 3}
       propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8544624993699910014, guid: 7e210cd8af642454b8b78c728b18a6b5,
         type: 3}
       propertyPath: reverbZoneMixCustomCurve.m_Curve.Array.data[0].value
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8855780314295173318, guid: 7e210cd8af642454b8b78c728b18a6b5,
         type: 3}
