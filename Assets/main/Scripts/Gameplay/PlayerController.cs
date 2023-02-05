@@ -1,13 +1,11 @@
 using UnityEngine;
 using System;
 
-public class PlayerController : MonoBehaviour
-{
+public class PlayerController : MonoBehaviour{
+
     public float moveSpeed = 5f;
 
     private float xScale;
-
-    private RaycastHit2D hit;
 
     private Rigidbody2D rigidbody2d;
     private Vector2 moveInput;
@@ -15,6 +13,14 @@ public class PlayerController : MonoBehaviour
     [SerializeField] public Animator animator;
 
     public bool isFreeze;
+
+    private bool isTouchingAbove;
+
+    [SerializeField] float maxRoofDistance = 8f;
+
+    public bool isRetourned = false;
+
+    private RaycastHit2D hitRoof;
 
     private void Start()
     {
@@ -24,21 +30,23 @@ public class PlayerController : MonoBehaviour
     }
 
     private void Update(){
-        //Capter depuis combien de temps l'appuie sur le haut est activé
+        Vector2 raycastStart = transform.position;
+        Vector2 raycastDirection = Vector2.up;
 
-        
+        if(!isRetourned){
+            Debug.DrawLine(raycastStart, raycastStart + raycastDirection * maxRoofDistance, Color.red);
+            hitRoof = Physics2D.Raycast(raycastStart, raycastDirection, maxRoofDistance);
+        }else{
+            Debug.DrawLine(raycastStart, raycastStart - raycastDirection * maxRoofDistance, Color.red);
+            hitRoof = Physics2D.Raycast(raycastStart, - raycastDirection, maxRoofDistance);
+        }
 
         // Get the position of your player
         Vector2 playerPosition = transform.position;
 
-        // Get the direction of the raycast
-        Vector2 rayDirection = Vector2.right;
-
         moveInput = new Vector2(Input.GetAxisRaw("Horizontal"), 0);
         moveInput = moveInput.normalized * moveSpeed;
 
-        Debug.DrawRay(transform.position, -transform.up * 2, Color.red);
-        
         if(!isFreeze){
             rigidbody2d.velocity = moveInput;
 
@@ -48,8 +56,8 @@ public class PlayerController : MonoBehaviour
                 transform.localScale = new Vector3(xScale, transform.localScale.y, transform.localScale.z);
             }
 
-            //inverser le gravity scale
-            if (Input.GetButtonDown("Jump")){
+            if (hitRoof.collider != null && Input.GetButtonDown("Jump")){
+                isRetourned = !isRetourned;
                 GetComponent<Rigidbody2D>().gravityScale = -GetComponent<Rigidbody2D>().gravityScale;
                 transform.localScale = new Vector3(transform.localScale.x, -transform.localScale.y, transform.localScale.z);
             }
