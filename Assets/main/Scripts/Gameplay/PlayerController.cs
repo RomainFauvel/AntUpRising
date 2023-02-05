@@ -14,6 +14,8 @@ public class PlayerController : MonoBehaviour
 
     [SerializeField] public Animator animator;
 
+    public bool isFreeze;
+
     private void Start()
     {
         rigidbody2d = GetComponent<Rigidbody2D>();
@@ -24,11 +26,7 @@ public class PlayerController : MonoBehaviour
     private void Update(){
         //Capter depuis combien de temps l'appuie sur le haut est activé
 
-        //inverser le gravity scale
-        if (Input.GetButtonDown("Jump")){
-            GetComponent<Rigidbody2D>().gravityScale = -GetComponent<Rigidbody2D>().gravityScale;
-            transform.localScale = new Vector3(transform.localScale.x, -transform.localScale.y, transform.localScale.z);
-        }
+        
 
         // Get the position of your player
         Vector2 playerPosition = transform.position;
@@ -40,12 +38,21 @@ public class PlayerController : MonoBehaviour
         moveInput = moveInput.normalized * moveSpeed;
 
         Debug.DrawRay(transform.position, -transform.up * 2, Color.red);
-        rigidbody2d.velocity = moveInput;
+        
+        if(!isFreeze){
+            rigidbody2d.velocity = moveInput;
 
-        if(Input.GetAxisRaw("Horizontal") == 1){
-            transform.localScale = new Vector3(-xScale, transform.localScale.y, transform.localScale.z);
-        }else if(Input.GetAxisRaw("Horizontal") == -1){
-            transform.localScale = new Vector3(xScale, transform.localScale.y, transform.localScale.z);
+            if(Input.GetAxisRaw("Horizontal") == 1){
+                transform.localScale = new Vector3(-xScale, transform.localScale.y, transform.localScale.z);
+            }else if(Input.GetAxisRaw("Horizontal") == -1){
+                transform.localScale = new Vector3(xScale, transform.localScale.y, transform.localScale.z);
+            }
+
+            //inverser le gravity scale
+            if (Input.GetButtonDown("Jump")){
+                GetComponent<Rigidbody2D>().gravityScale = -GetComponent<Rigidbody2D>().gravityScale;
+                transform.localScale = new Vector3(transform.localScale.x, -transform.localScale.y, transform.localScale.z);
+            }
         }
     }
 
