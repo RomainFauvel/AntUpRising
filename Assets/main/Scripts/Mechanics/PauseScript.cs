@@ -6,6 +6,9 @@ using UnityEngine.SceneManagement;
 public class PauseScript : MonoBehaviour
 {
     [SerializeField] public GameObject pauseMenu;
+    [SerializeField] public GameObject fruitIcon;
+    [SerializeField] public GameObject counter;
+    [SerializeField] public GameObject HealthBar;
 	public static bool isPaused;
 	// Start is called before the first frame update
     void Start()
@@ -33,6 +36,9 @@ public class PauseScript : MonoBehaviour
 	public void PauseGame()
 	{
 		pauseMenu.SetActive(true);
+		fruitIcon.SetActive(false);
+		counter.SetActive(false);
+		HealthBar.SetActive(false);
 		Time.timeScale = 0f;
 		isPaused = true;
 	}
@@ -40,6 +46,9 @@ public class PauseScript : MonoBehaviour
 	public void ResumeGame()
 	{
 		pauseMenu.SetActive(false);
+		fruitIcon.SetActive(true);
+		counter.SetActive(true);
+		HealthBar.SetActive(true);
 		Time.timeScale = 1f;
 		isPaused = false;
 	}
