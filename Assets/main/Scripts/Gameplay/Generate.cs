@@ -6,9 +6,7 @@ public class Generate : MonoBehaviour
 {
     public GameObject enemies;
 
-    // Use this for initialization
-    void Start()
-    {
+    void Start(){
         InvokeRepeating("CreateObstacle", 1f, 1.5f);
     }
 

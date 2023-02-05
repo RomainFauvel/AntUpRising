@@ -18,65 +18,36 @@ public class EnnemyBehaviour : MonoBehaviour
     float duree;
     int direction;
 
-    private void Start()
-    {
+    private void Start(){
         rb = GetComponent<Rigidbody2D>();
         player = GameObject.FindGameObjectWithTag("Player");
     }
 
-    private void Update()
-    {
-
-        if (isTrigger == false) 
-        {
-            if (duree < 0)
-            {
+    private void Update(){
+        if (isTrigger == false) {
+            if (duree < 0){
                 duree = Random.Range(1, 3);
                 direction = Random.Range(0, 2);
                 print(direction);
                 print("<0");
-            }
-            else
-            {
-
-                if (direction == 0)
-                {
+            }else{
+                if (direction == 0){
                     moveInput = new Vector2(Random.Range(1, 5), 0);
-
-                    //direction = 1;
-                }
-                else
-                {
+                }else{
                     moveInput = new Vector2(Random.Range(-5, -1), 0);
-
-                    //direction = 0;
                 }
-
                 duree = duree - Time.deltaTime;
-
             }
-        }
-        else
-        {
+        }else{
             moveInput = (player.transform.position - gameObject.transform.position).normalized * aggroSpeed;
-            print("Triggereddzzzz");
         }
-        
-        //get all the input of the user
-        //moveInput = new Vector2(Random.Range(1, 5), 0);
-
-
     }
 
-    private void FixedUpdate()
-    {
-        //edit the velocity by use input and speed
+    private void FixedUpdate(){
         rb.velocity = moveInput * speed;
-
     }
 
-    public void getTrigger() 
-    {
+    public void getTrigger() {
         isTrigger = true;
     }
 

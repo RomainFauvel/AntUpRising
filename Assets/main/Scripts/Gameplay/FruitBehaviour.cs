@@ -7,16 +7,14 @@ public class FruitBehaviour : MonoBehaviour
 
     public bool isTrigger = false;
     private InventoryScript inventoryScript;
-    // Start is called before the first frame update
-    void Start()
-    {
+
+    void Start(){
         GameObject logic = GameObject.Find("InventoryLogic");
         inventoryScript = logic.GetComponent<InventoryScript>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
+
+    void Update(){
         if (isTrigger)
         {
             inventoryScript.inventory.Add(gameObject);
