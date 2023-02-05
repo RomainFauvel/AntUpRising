@@ -12,6 +12,6 @@ EditorBuildSettings:
     path: Assets/main/Scenes/MainScene.unity
     guid: 098a8fe18eadbee4b92f9a66521fd353
   - enabled: 1
-    path: Assets/Mael/GameOverScreen/GameOverScene.unity
+    path: Assets/main/Scenes/GameOverScene.unity
     guid: b9433289c63eac24d9334b9aaae7420c
   m_configObjects: {}
