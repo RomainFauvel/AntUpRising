@@ -73,6 +73,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: enemy
       objectReference: {fileID: 0}
+    - target: {fileID: 538912533608153526, guid: ddeafe4d520d4c446ba32985bc78465e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 538912533608153527, guid: ddeafe4d520d4c446ba32985bc78465e,
         type: 3}
       propertyPath: m_BodyType
@@ -145,3 +150,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 2
+  DamageOnCollision: 20

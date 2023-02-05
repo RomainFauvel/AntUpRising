@@ -39,7 +39,8 @@ public class EnemiesControler : MonoBehaviour
 
         //Capter depuis combien de temps l'appuie sur le haut est activé
 
-        /*//inverser le gravity scale
+        //inverser le gravity scale
+        /*
         if (Input.GetButtonDown("Jump")){
             GetComponent<Rigidbody2D>().gravityScale = -GetComponent<Rigidbody2D>().gravityScale;
             transform.localScale = new Vector3(transform.localScale.x, -transform.localScale.y, transform.localScale.z);
@@ -68,6 +69,8 @@ public class EnemiesControler : MonoBehaviour
                 direction = UnityEngine.Random.Range(0, 2);
                 print(direction);
                 print(duree);
+                GetComponent<Rigidbody2D>().gravityScale = -GetComponent<Rigidbody2D>().gravityScale;
+                transform.localScale = new Vector3(transform.localScale.x, -transform.localScale.y, transform.localScale.z);
 
             }
             else

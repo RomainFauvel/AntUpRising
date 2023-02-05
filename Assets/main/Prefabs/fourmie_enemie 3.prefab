@@ -84,7 +84,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1.7, y: 1.7}
+  m_Size: {x: 2.2857144, y: 1.5}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -105,7 +105,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 20
+  m_GravityScale: 80
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -129,7 +129,7 @@ BoxCollider2D:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 2.2857144, y: 1.5}
-    newSize: {x: 1.7, y: 1.7}
+    newSize: {x: 2.2857144, y: 1.5}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -169,10 +169,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22ed636b2578af247893b7b0a349989c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 4
-  aggroSpeed: 8
+  speed: 10
+  aggroSpeed: 12
   isTrigger: 0
-  moveSpeed: 8
+  moveSpeed: 10
   DamageOnCollision: 20
 --- !u!114 &2009730194357553534
 MonoBehaviour:
