@@ -3,7 +3,6 @@
 ## Overview
 ![Main Preview](assets/img/main.png)
 
-
 ##Jeu conçu lors du Global Game Jam 2023
 ##Participants : Mael Madec, Florian Pasco, Romain Cloâtre, Théo De Morais, Romain Fauvel
 
