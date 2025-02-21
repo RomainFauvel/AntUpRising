@@ -1,12 +1,26 @@
-# AntUpRising
+# 🐜 AntUpRising
 
-## Overview
+## 🚀 Overview
 ![Main Preview](assets/img/main.png)
 
-##Jeu conçu lors du Global Game Jam 2023
-##Participants : Mael Madec, Florian Pasco, Romain Cloâtre, Théo De Morais, Romain Fauvel
+AntUpRising is an engaging 2D platformer created during the Global Game Jam 2023. Step into the shoes of an ant and dive into a vibrant world where your mission is to bring food back to the queen ant. But beware! Strange roots have taken over the anthill, causing the ants to become aggressive and unpredictable.
 
-###Le Jeu :
-Le jeu est un platformer 2D conçu sur Unity3D.
-Le joueur incarne une fourmi. Son but : ramener de la nourriture à la reine des fourmis. Le problème est que de certaines racines bizarres poussent dans la fourmilière, les fourmis ayant goutés aux racines deviennent folles.
-I faut donc arriver à la salle de la reine des formis tout en évitant les fourmis aggressives.
+## 🎯 Purpose
+- 🍽️ **Food Retrieval**: Collect resources to nourish the queen ant.
+- ⚔️ **Avoid Threats**: Dodge the crazed ants and other dangers along your journey.
+- 👑 **Reach the Queen**: Overcome obstacles to make your way to the queen's chamber.
+
+## 📝 Features
+- 🌍 **Vibrant 2D Environment**: Immerse yourself in a colorful and detailed world.
+- 🏃 **Dynamic Gameplay Mechanics**: Interact with enemies and tackle various challenges.
+- 🎮 **Immersive Gaming Experience**: Enjoy an exciting adventure through the tunnels of the anthill.
+
+## 👥 Team Members
+- Mael Madec
+- Florian Pasco
+- Romain Cloâtre
+- Théo De Morais
+- Romain Fauvel
+
+## 🌟 License
+This project is open-source. Feel free to use, modify, and contribute! 🚀
